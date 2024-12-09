@@ -6,24 +6,25 @@
 
 ```json
     {
-        "name": "test-server",
-        "version": "1.0.0",
-        "description": "A CLI-based web server built with Express.js",
-        "main": "cli.js",
-        "bin": {
-            "test-server": "cli.js"
-        },
-        "author": "Your Name",
-        "license": "MIT"
+      "name": "test-server",
+      "version": "1.0.0",
+      "description": "A simple web server",
+      "main": "server.js",
+      "bin": {
+        "test-server": "server.js"
+      },
+      "dependencies": {
+        "express": "^4.21.2"
+      }
     }
 ```
 
 ```bash
     npm install express
-    touch cli.js
+    touch server.js
 ```
 
-```js // cli.js
+```js // server.js
 #!/usr/bin/env node
 
 const express = require("express");
@@ -46,7 +47,7 @@ app.listen(port, () => {
 ```
 
 ```bash
-    chmod +x cli.js
+    chmod +x server.js
     npm link
     test-server
 ```
